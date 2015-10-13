@@ -46,8 +46,6 @@ public class TestBug01Replicate {
 		mockDice1 = null;
 		mockDice2 = null;
 		mockDice3 = null;
-		
-		// tearDown of DiceValue, etc... not necessary as they are set before every test
 	}
 	
 	
