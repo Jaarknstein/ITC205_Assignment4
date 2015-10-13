@@ -40,10 +40,11 @@ public class Game {
 			}
 		}
 		
-		int winnings = (matches * bet) + bet;
+		int winnings = matches * bet;
+		int totalWinnings = winnings + bet;
 
 		if (matches > 0) {			
-			player.receiveWinnings(winnings);
+			player.receiveWinnings(totalWinnings);
 		}
         return winnings;		
 	}
