@@ -17,7 +17,7 @@ import game.DiceValue;
 import game.Game;
 import game.Player;
 
-public class testBug01Replicate {
+public class TestBug01Replicate {
 
 	// Declaration of variables
 	private Player player;
