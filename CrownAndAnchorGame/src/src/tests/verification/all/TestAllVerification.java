@@ -9,13 +9,8 @@ import tests.verification.TestBug03Fixed;
 import tests.verification.TestBug04Fixed;
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({
-   TestBug01Fixed.class,
-   TestBug02Fixed.class,
-   TestBug03Fixed.class,
-   TestBug04Fixed.class
-})
+@Suite.SuiteClasses({ TestBug01Fixed.class, TestBug02Fixed.class, TestBug03Fixed.class, TestBug04Fixed.class })
 
-public class TestAllVerification {  
-	
-}  	
+public class TestAllVerification {
+
+}

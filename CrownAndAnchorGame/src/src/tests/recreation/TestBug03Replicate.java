@@ -18,38 +18,38 @@ public class TestBug03Replicate {
 
 	// Test to see if the bug exists
 	@Test
-	public void testBug03Exist(){
-		
+	public void testBug03Exist() {
+
 		// Creates 24 rolls
 		DiceValue[] rolls = new DiceValue[24];
-		
+
 		// Visual output for test
 		System.out.println("\ntestBug03Exist()");
 		System.out.println("===========================");
-		
+
 		// Setup
 		// Assigns the 24 rolls a random DiceValue using .getrandom
 		int counter = 0;
-		for (DiceValue d : rolls){
+		for (DiceValue d : rolls) {
 			rolls[counter] = DiceValue.getRandom();
 			System.out.println(counter + " - " + rolls[counter]);
 			counter++;
 		}
-		
-		// Looks for any rolls == SPADES 
-		 counter = 0;
-		 int match = 1;
-		 
-		//Assert
-		for (DiceValue d : rolls){
-			
-			if (d == DiceValue.SPADE){
-				System.out.println("Spades- "+ match);
-				match ++;
-			}	
+
+		// Looks for any rolls == SPADES
+		counter = 0;
+		int match = 1;
+
+		// Assert
+		for (DiceValue d : rolls) {
+
+			if (d == DiceValue.SPADE) {
+				System.out.println("Spades- " + match);
+				match++;
+			}
 			counter++;
 		}
-		
+
 		assertFalse(match > 1);
 		System.out.println("===========================");
 	}

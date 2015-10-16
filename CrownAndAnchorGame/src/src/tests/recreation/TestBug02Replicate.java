@@ -26,22 +26,20 @@ public class TestBug02Replicate {
 	private Player player;
 	private Dice mockDice1, mockDice2, mockDice3;
 	private Game game;
-	
+
 	// Will run before every test
 	@Before
 	public void setUp() throws Exception {
-		
+
 		// Initialization of variables
 		// Balance is 5 to test limit
 		player = new Player("John", 5);
-		
+
 		mockDice1 = mock(Dice.class);
 		mockDice2 = mock(Dice.class);
 		mockDice3 = mock(Dice.class);
 	}
-	
-	
-	
+
 	// Will run after every test
 	@After
 	public void tearDown() throws Exception {
@@ -51,22 +49,20 @@ public class TestBug02Replicate {
 		mockDice2 = null;
 		mockDice3 = null;
 	}
-	
-	
-	
-	// Test to see if the bug exists 
-	@Test(expected=IllegalArgumentException.class) // Will throw if bug exists
-	public void testBug02Exist(){
+
+	// Test to see if the bug exists
+	@Test(expected = IllegalArgumentException.class) // Will throw if bug exists
+	public void testBug02Exist() {
 		when(mockDice1.getValue()).thenReturn(DiceValue.HEART);
 		when(mockDice2.getValue()).thenReturn(DiceValue.HEART);
 		when(mockDice3.getValue()).thenReturn(DiceValue.HEART);
-		
+
 		game = new Game(mockDice1, mockDice2, mockDice3);
-		
+
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int bet = 5;
-		
+
 		// Execute
 		game.playRound(player, pick, bet);
 	}
