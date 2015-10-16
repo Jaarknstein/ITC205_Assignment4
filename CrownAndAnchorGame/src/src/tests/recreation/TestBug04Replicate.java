@@ -26,7 +26,7 @@ public class TestBug04Replicate {
 	// Declaration of variables
 	private Player player;
 	private Dice dice1, dice2, dice3;
-	private Game game, game2;
+	private Game game;
 	DiceValue[] round1 = new DiceValue[3];
 	DiceValue[] round2 = new DiceValue[3];
 
