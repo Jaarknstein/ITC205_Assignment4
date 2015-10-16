@@ -18,6 +18,8 @@ public class Game {
 		dice.add(die3);
 		values = new ArrayList<DiceValue>();
 	}
+	
+	
 
 	public List<DiceValue> getDiceValues() {
 		values.clear();
@@ -26,6 +28,8 @@ public class Game {
 		}
 		return Collections.unmodifiableList(values);
 	}
+	
+	
 
 	public int playRound(Player player, DiceValue pick, int bet) {
 		if (player == null)
@@ -53,5 +57,4 @@ public class Game {
 		}
 		return winnings;
 	}
-
 }

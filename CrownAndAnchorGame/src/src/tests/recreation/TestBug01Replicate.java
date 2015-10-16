@@ -40,6 +40,8 @@ public class TestBug01Replicate {
 		mockDice2 = mock(Dice.class);
 		mockDice3 = mock(Dice.class);
 	}
+	
+	
 
 	// Will run after every test
 	@After
@@ -50,6 +52,8 @@ public class TestBug01Replicate {
 		mockDice2 = null;
 		mockDice3 = null;
 	}
+	
+	
 
 	// Test to see if the bug exists (Note, only one match is used)
 	@Test
@@ -86,6 +90,8 @@ public class TestBug01Replicate {
 		System.out.println("Winning = " + winning);
 		System.out.println("===========================");
 	}
+	
+	
 
 	// Test to see if the bug exists (Note, 2 matches are used)
 	@Test
@@ -122,6 +128,8 @@ public class TestBug01Replicate {
 		System.out.println("Winning = " + winning);
 		System.out.println("===========================");
 	}
+	
+	
 
 	// Test to see if the bug exists (Note, 3 matches are used)
 	@Test

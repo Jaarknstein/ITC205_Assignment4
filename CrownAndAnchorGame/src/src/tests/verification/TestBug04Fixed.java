@@ -41,6 +41,8 @@ public class TestBug04Fixed {
 		dice2 = new Dice();
 		dice3 = new Dice();
 	}
+	
+	
 
 	// Will run after every test
 	@After
@@ -50,6 +52,8 @@ public class TestBug04Fixed {
 		dice3 = null;
 		game = null;
 	}
+	
+	
 
 	// Test to see if the bug is fixed
 	@Test

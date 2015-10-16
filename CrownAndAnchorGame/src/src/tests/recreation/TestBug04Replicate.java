@@ -40,6 +40,8 @@ public class TestBug04Replicate {
 		dice2 = new Dice();
 		dice3 = new Dice();
 	}
+	
+	
 
 	// Will run after every test
 	@After
@@ -49,6 +51,8 @@ public class TestBug04Replicate {
 		dice3 = null;
 		game = null;
 	}
+	
+	
 
 	// Test to see if the bug exists
 	@Test

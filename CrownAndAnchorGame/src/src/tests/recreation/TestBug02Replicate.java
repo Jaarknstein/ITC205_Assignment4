@@ -39,6 +39,8 @@ public class TestBug02Replicate {
 		mockDice2 = mock(Dice.class);
 		mockDice3 = mock(Dice.class);
 	}
+	
+	
 
 	// Will run after every test
 	@After
@@ -49,6 +51,8 @@ public class TestBug02Replicate {
 		mockDice2 = null;
 		mockDice3 = null;
 	}
+	
+	
 
 	// Test to see if the bug exists
 	@Test(expected = IllegalArgumentException.class) // Will throw if bug exists
