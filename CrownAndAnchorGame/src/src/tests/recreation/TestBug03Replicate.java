@@ -23,7 +23,7 @@ public class TestBug03Replicate {
 		DiceValue[] rolls = new DiceValue[24];
 		
 		// Visual output for test
-		System.out.println("\ntestBug01Exist()");
+		System.out.println("\ntestBug03Exist()");
 		System.out.println("===========================");
 		
 		// Setup

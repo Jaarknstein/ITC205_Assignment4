@@ -1,9 +1,9 @@
 package tests.verification;
 
 /**
- * Please note, these tests are testing if the bugs EXIST, therefore are true if the bug exists
+ * Please note, these tests are testing if the bugs are FIXED, therefore are true if the bug not exists
  * 
- * A separate group of tests will test if the program is fixed. Those tests will fail if a bug exists.
+ * A separate group of tests will test if the program is bugged. Those tests will pass if a bug exists.
  */
 
 // Import tests
@@ -51,21 +51,31 @@ public class TestBug02Fixed {
 	
 	// Test to see if the bug exists 
 	@Test
-	public void testIsNormal(){
+	public void testLimitIsNormal(){
 		when(mockDice1.getValue()).thenReturn(DiceValue.HEART);
 		when(mockDice2.getValue()).thenReturn(DiceValue.HEART);
 		when(mockDice3.getValue()).thenReturn(DiceValue.HEART);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int bet = 5;
 		
+		// Visual output for test
+		System.out.println("\ntestBug02Fixed()");
+		System.out.println("===========================");
+		
+		System.out.println("Balance Before = " + player.getBalance());
+		
 		// Execute
 		game.playRound(player, pick, bet);
 		
+		System.out.println("Balance After = " + player.getBalance());
+		
 		//assert
 		assert(true); // Will only assert if no exception is called (exception called if bug exists)
+		
+		System.out.println("Limit not reached when betting 5, on balance of 5");
+		System.out.println("===========================");
 	}
 }

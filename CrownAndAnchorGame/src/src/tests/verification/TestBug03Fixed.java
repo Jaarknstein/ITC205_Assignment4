@@ -17,13 +17,13 @@ public class TestBug03Fixed {
 
 	// Test to see if the bug exists
 	@Test
-	public void testBug03Fixed(){
+	public void testSpadeChanceIsNormal(){
 		
 		// Creates 24 rolls
 		DiceValue[] rolls = new DiceValue[24];
 		
 		// Visual output for test
-		System.out.println("\ntestBug01Fixed()");
+		System.out.println("\ntestBug03Fixed()");
 		System.out.println("===========================");
 		
 		// Setup
@@ -49,7 +49,7 @@ public class TestBug03Fixed {
 			counter++;
 		}
 		
-		assertTrue(match > 1);
+		assertTrue(match > 1); // if there is more than one match, then SPADES are occurring.
 		System.out.println("===========================");
 	}
 }

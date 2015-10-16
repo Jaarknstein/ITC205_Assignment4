@@ -30,7 +30,6 @@ public class TestBug01Fixed {
 		
 		// Initialization of variables
 		player = new Player("John", 100);
-		
 		mockDice1 = mock(Dice.class);
 		mockDice2 = mock(Dice.class);
 		mockDice3 = mock(Dice.class);
@@ -52,29 +51,28 @@ public class TestBug01Fixed {
 	
 	// Test to see if the bug exists (Note, only one match is used)
 	@Test
-	public void testIsNormal(){
+	public void testWinningsIsWorking1Match(){
 		when(mockDice1.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice2.getValue()).thenReturn(DiceValue.HEART);
 		when(mockDice3.getValue()).thenReturn(DiceValue.HEART);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		int expectedWinnings = 5; // Expected winnings if bug exists
 		
-
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int balance = player.getBalance();
 		int bet = 5;
 		
 		// Execute
-		int winning = game.playRound(player, pick, bet);
+		game.playRound(player, pick, bet);
+		int winning= (player.getBalance() - balance) + bet;
 		
 		// Assert
 		assertNotEquals(expectedWinnings, winning);
 		
 		// Visual output for test
-		System.out.println("\ntestBug01Exist()");
+		System.out.println("\ntestBug01Fixed()");
 		System.out.println("===========================");
 		System.out.println("Name = " + player.getName());
 		System.out.println("Balance = " + balance);
@@ -90,29 +88,28 @@ public class TestBug01Fixed {
 	
 	// Test to see if the bug exists (Note, 2 matches are used)
 	@Test
-	public void testIsNormal2Match(){
+	public void testWinningsIsWorking2Match(){
 		when(mockDice1.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice2.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice3.getValue()).thenReturn(DiceValue.HEART);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		int expectedWinnings = 10; // Expected winnings if bug exists
 		
-
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int balance = player.getBalance();
 		int bet = 5;
 		
 		// Execute
-		int winning = game.playRound(player, pick, bet);
+		game.playRound(player, pick, bet);
+		int winning= (player.getBalance() - balance) + bet;
 		
 		// Assert
 		assertNotEquals(expectedWinnings, winning);
 		
 		// Visual output for test
-		System.out.println("\ntestBug01Exist2Match()");
+		System.out.println("\ntestBug01Fixed2Match()");
 		System.out.println("===========================");
 		System.out.println("Name = " + player.getName());
 		System.out.println("Balance = " + balance);
@@ -128,29 +125,28 @@ public class TestBug01Fixed {
 	
 	// Test to see if the bug exists (Note, 3 matches are used)
 	@Test
-	public void testIsNormal3Match(){
+	public void testWinningsIsWorking3Match(){
 		when(mockDice1.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice2.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice3.getValue()).thenReturn(DiceValue.SPADE);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		int expectedWinnings = 15; // Expected winnings if bug exists
 		
-
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int balance = player.getBalance();
 		int bet = 5;
 		
 		// Execute
-		int winning = game.playRound(player, pick, bet);
+		game.playRound(player, pick, bet);
+		int winning= (player.getBalance() - balance) + bet;
 		
 		// Assert
 		assertNotEquals(expectedWinnings, winning);
 		
 		// Visual output for test
-		System.out.println("\ntestBug01Exist3Match()");
+		System.out.println("\ntestBug01Fixed3Match()");
 		System.out.println("===========================");
 		System.out.println("Name = " + player.getName());
 		System.out.println("Balance = " + balance);

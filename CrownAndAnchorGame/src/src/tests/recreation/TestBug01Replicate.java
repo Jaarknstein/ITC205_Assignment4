@@ -56,19 +56,18 @@ public class TestBug01Replicate {
 		when(mockDice1.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice2.getValue()).thenReturn(DiceValue.HEART);
 		when(mockDice3.getValue()).thenReturn(DiceValue.HEART);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		int expectedWinnings = 5; // Expected winnings if bug exists
 		
-
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int balance = player.getBalance();
 		int bet = 5;
 		
 		// Execute
-		int winning = game.playRound(player, pick, bet);
+		game.playRound(player, pick, bet);
+		int winning= (player.getBalance() - balance) + bet;
 		
 		// Assert
 		assertEquals(expectedWinnings, winning);
@@ -94,19 +93,18 @@ public class TestBug01Replicate {
 		when(mockDice1.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice2.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice3.getValue()).thenReturn(DiceValue.HEART);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		int expectedWinnings = 10; // Expected winnings if bug exists
 		
-
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int balance = player.getBalance();
 		int bet = 5;
 		
 		// Execute
-		int winning = game.playRound(player, pick, bet);
+		game.playRound(player, pick, bet);
+		int winning= (player.getBalance() - balance) + bet;
 		
 		// Assert
 		assertEquals(expectedWinnings, winning);
@@ -132,19 +130,18 @@ public class TestBug01Replicate {
 		when(mockDice1.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice2.getValue()).thenReturn(DiceValue.SPADE);
 		when(mockDice3.getValue()).thenReturn(DiceValue.SPADE);
-		
 		game = new Game(mockDice1, mockDice2, mockDice3);
 		
 		int expectedWinnings = 15; // Expected winnings if bug exists
 		
-
 		// Setup
 		DiceValue pick = DiceValue.SPADE;
 		int balance = player.getBalance();
 		int bet = 5;
 		
 		// Execute
-		int winning = game.playRound(player, pick, bet);
+		game.playRound(player, pick, bet);
+		int winning= (player.getBalance() - balance) + bet;
 		
 		// Assert
 		assertEquals(expectedWinnings, winning);

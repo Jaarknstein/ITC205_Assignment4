@@ -28,6 +28,7 @@ public class TestBug02Replicate {
 	public void setUp() throws Exception {
 		
 		// Initialization of variables
+		// Balance is 5 to test limit
 		player = new Player("John", 5);
 		
 		mockDice1 = mock(Dice.class);
