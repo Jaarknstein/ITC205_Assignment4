@@ -40,7 +40,7 @@ public class Game {
 			}
 		}
 		
-		int winnings = matches * bet;
+		int winnings = matches * bet; // Was Bug01
 		int totalWinnings = winnings + bet;
 
 		if (matches > 0) {			

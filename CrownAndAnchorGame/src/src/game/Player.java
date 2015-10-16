@@ -28,7 +28,7 @@ public class Player {
 	}
 	
 	public boolean balanceExceedsLimitBy(int amount) {
-		return (balance - amount > limit);
+		return (balance - amount >= limit); // Was Bug02
 	}
 	
 	public void takeBet(int bet) {
