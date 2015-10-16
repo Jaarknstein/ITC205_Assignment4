@@ -42,6 +42,7 @@ public class Player {
 		balance = balance + winnings;		
 	}
 	
+	@Override
 	public String toString() {
 		return String.format("Player: %s, Balance: %d, Limit: %d", name, balance, limit);
 	}

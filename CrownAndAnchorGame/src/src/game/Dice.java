@@ -15,6 +15,7 @@ public class Dice {
 		value = DiceValue.getRandom(); // Was bug04
 	}		
 	
+	@Override
 	public String toString() {
 		return value.toString();
 	}
