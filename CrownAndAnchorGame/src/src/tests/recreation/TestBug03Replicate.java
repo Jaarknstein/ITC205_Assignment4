@@ -7,8 +7,9 @@ package tests.recreation;
  */
 
 // Import tests
-import static org.junit.Assert.*;
-import org.junit.*;
+import static org.junit.Assert.assertFalse;
+
+import org.junit.Test;
 
 // Import for testing
 import game.DiceValue;

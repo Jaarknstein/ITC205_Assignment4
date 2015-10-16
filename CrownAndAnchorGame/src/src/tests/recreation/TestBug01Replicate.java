@@ -1,5 +1,7 @@
 package tests.recreation;
 
+import static org.junit.Assert.assertEquals;
+
 /**
  * Please note, these tests are testing if the bugs EXIST, therefore are true if the bug exists
  * 
@@ -7,9 +9,12 @@ package tests.recreation;
  */
 
 // Import tests
-import static org.mockito.Mockito.*;
-import static org.junit.Assert.*;
-import org.junit.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 // Import for testing
 import game.Dice;

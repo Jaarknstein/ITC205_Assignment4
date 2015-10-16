@@ -7,8 +7,12 @@ package tests.recreation;
  */
 
 // Import tests
-import static org.mockito.Mockito.*;
-import org.junit.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 // Import for testing
 import game.Dice;

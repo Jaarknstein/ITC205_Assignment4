@@ -10,7 +10,10 @@ import static org.junit.Assert.assertTrue;
 
 // Import tests
 import java.util.Arrays;
-import org.junit.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 // Import for testing
 import game.Dice;
